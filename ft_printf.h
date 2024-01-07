@@ -6,7 +6,7 @@
 /*   By: haouky <haouky@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 13:49:10 by haouky            #+#    #+#             */
-/*   Updated: 2024/01/07 13:50:17 by haouky           ###   ########.fr       */
+/*   Updated: 2024/01/07 18:58:55 by haouky           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int	ft_printf(const char *s, ...);
+int ft_printf(const char *s, ...);
 int	hex(unsigned int n);
 int	hexuper(unsigned int n);
 int	upnbr(unsigned int n);
