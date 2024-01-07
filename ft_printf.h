@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int ft_printf(const char *s, ...);
+int	ft_printf(const char *s, ...);
 int	hex(unsigned int n);
 int	hexuper(unsigned int n);
 int	upnbr(unsigned int n);
