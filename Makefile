@@ -3,7 +3,7 @@ SRCS   = ft_printf.c hex.c hexuper.c upnbr.c putads.c pnbr.c wrtc.c wrts.c
 
 OBJS	= ${SRCS:%.c=%.o}
 
-FLAGS	= -Wall 
+FLAGS	= -Wall -Werror -Wextra
 
 $(NAME):
 	gcc $(FLAGS) -c $(SRCS)
