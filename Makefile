@@ -1,15 +1,17 @@
 NAME	= libftprintf.a
 SRCS   = ft_printf.c hex.c hexuper.c upnbr.c putads.c pnbr.c wrtc.c wrts.c
-
-OBJS	= ${SRCS:%.c=%.o}
+HEDER = ft_printf.h
+OBJS	= ${SRCS:.c=.o}
 
 FLAGS	= -Wall -Werror -Wextra
 
-$(NAME):
-	gcc $(FLAGS) -c $(SRCS)
+all: $(NAME)
+
+$(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
-all: $(NAME)
+%.o: %.c $(HEDER)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS)
@@ -18,8 +20,3 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-a:
-	@gcc $(FLAGS) *.c -o aout
-	@./aout
-	@rm -f aout	
